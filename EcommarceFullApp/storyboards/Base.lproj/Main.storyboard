@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTR-i3-tA9" userLabel="fullView">
-                                <rect key="frame" x="20" y="114" width="355" height="615"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="635"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T27-X8-ewg">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="615"/>
+                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T27-X8-ewg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="635"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EcH-ka-VBx">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="EcH-ka-VBx">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="50" height="50"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -31,7 +31,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell1" id="q35-Ue-DG5" customClass="topCollectionViewCell" customModule="EcommarceFullApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.66666666666666663" y="50" width="354" height="120"/>
+                                                <rect key="frame" x="10.666666666666666" y="50" width="354" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eoA-ZQ-v0t">
                                                     <rect key="frame" x="0.0" y="0.0" width="354" height="120"/>
@@ -50,7 +50,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="bcf-z9-SEy">
-                                                            <rect key="frame" x="0.0" y="71" width="274" height="49"/>
+                                                            <rect key="frame" x="0.0" y="71.333333333333329" width="274.33333333333331" height="48.666666666666671"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <scopeButtonTitles>
                                                                 <string>Title</string>
@@ -88,7 +88,7 @@
                                                 </connections>
                                             </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell2" id="oS6-Lh-3Wh" customClass="brandCollectionViewCell" customModule="EcommarceFullApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="284" width="115" height="49"/>
+                                                <rect key="frame" x="0.0" y="274" width="115" height="49"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h08-BV-76G">
                                                     <rect key="frame" x="0.0" y="0.0" width="115" height="49"/>
@@ -110,17 +110,29 @@
                                                                         <constraint firstItem="9HF-88-myj" firstAttribute="centerY" secondItem="MCI-U1-FRN" secondAttribute="centerY" id="Bev-dZ-Kxh"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adidas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvl-fr-Hgg">
-                                                                    <rect key="frame" x="55" y="15.666666666666664" width="48" height="18"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPC-je-JMO" userLabel="lableView">
+                                                                    <rect key="frame" x="45" y="0.0" width="70" height="49"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adidas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvl-fr-Hgg">
+                                                                            <rect key="frame" x="11" y="15.666666666666664" width="48" height="18"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="Tvl-fr-Hgg" firstAttribute="centerX" secondItem="hPC-je-JMO" secondAttribute="centerX" id="2ab-30-fXr"/>
+                                                                        <constraint firstItem="Tvl-fr-Hgg" firstAttribute="centerY" secondItem="hPC-je-JMO" secondAttribute="centerY" id="xvb-2Q-HTT"/>
+                                                                    </constraints>
+                                                                </view>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="Tvl-fr-Hgg" firstAttribute="centerY" secondItem="Qka-9w-pth" secondAttribute="centerY" id="GJy-1o-AUQ"/>
-                                                                <constraint firstItem="Tvl-fr-Hgg" firstAttribute="leading" secondItem="Qka-9w-pth" secondAttribute="trailing" multiplier="55/115" id="RWp-qk-fhL"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hPC-je-JMO" secondAttribute="bottom" id="9mR-bA-giW"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hPC-je-JMO" secondAttribute="trailing" id="FYx-Zx-iCG"/>
+                                                                <constraint firstItem="hPC-je-JMO" firstAttribute="leading" secondItem="MCI-U1-FRN" secondAttribute="trailing" id="SVM-7m-EfZ"/>
+                                                                <constraint firstItem="hPC-je-JMO" firstAttribute="top" secondItem="Qka-9w-pth" secondAttribute="top" id="Wkc-PN-dFJ"/>
                                                                 <constraint firstItem="MCI-U1-FRN" firstAttribute="height" secondItem="Qka-9w-pth" secondAttribute="height" multiplier="40/50" id="Z1U-66-3m4"/>
                                                                 <constraint firstItem="MCI-U1-FRN" firstAttribute="leading" secondItem="Qka-9w-pth" secondAttribute="leading" constant="5" id="c7X-Et-UER"/>
                                                                 <constraint firstItem="MCI-U1-FRN" firstAttribute="width" secondItem="Qka-9w-pth" secondAttribute="width" multiplier="40/115" id="i9A-zq-oPb"/>
@@ -145,7 +157,7 @@
                                                 </connections>
                                             </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell3" id="Zpo-eE-dzB" customClass="productCollectionViewCell" customModule="EcommarceFullApp" customModuleProvider="target">
-                                                <rect key="frame" x="125" y="180" width="160" height="257"/>
+                                                <rect key="frame" x="115" y="170" width="160" height="257"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jhx-Nm-wsl">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="257"/>
@@ -201,8 +213,8 @@ Fleece</string>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
-                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ReusableView" id="3jg-GH-5B4" customClass="CollectionViewHeaderReusableView" customModule="EcommarceFullApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                        <collectionReusableView key="sectionHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ReusableView" id="3jg-GH-5B4" customClass="CollectionViewHeaderReusableView" customModule="EcommarceFullApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbY-kN-SO6">
@@ -212,7 +224,7 @@ Fleece</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrt-rn-ore">
-                                                    <rect key="frame" x="263" y="10" width="72" height="30"/>
+                                                    <rect key="frame" x="283" y="10" width="72" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="View All">
                                                         <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
@@ -220,12 +232,17 @@ Fleece</string>
                                                     </buttonConfiguration>
                                                 </button>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="HbY-kN-SO6" firstAttribute="leading" secondItem="3jg-GH-5B4" secondAttribute="leading" id="3Wf-gt-3gy"/>
                                                 <constraint firstItem="Mrt-rn-ore" firstAttribute="centerY" secondItem="3jg-GH-5B4" secondAttribute="centerY" id="CQF-xn-hYv"/>
                                                 <constraint firstItem="HbY-kN-SO6" firstAttribute="centerY" secondItem="3jg-GH-5B4" secondAttribute="centerY" id="FNt-sy-7pf"/>
                                                 <constraint firstAttribute="trailing" secondItem="Mrt-rn-ore" secondAttribute="trailing" constant="20" id="a0y-Le-p4J"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="title" destination="HbY-kN-SO6" id="EDd-od-rDq"/>
+                                                <outlet property="viewAllButton" destination="Mrt-rn-ore" id="7le-QA-nDQ"/>
+                                            </connections>
                                         </collectionReusableView>
                                     </collectionView>
                                 </subviews>
@@ -241,8 +258,8 @@ Fleece</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KTR-i3-tA9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0cg-jr-tag"/>
-                            <constraint firstItem="KTR-i3-tA9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BiS-1l-hgr"/>
+                            <constraint firstItem="KTR-i3-tA9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0cg-jr-tag"/>
+                            <constraint firstItem="KTR-i3-tA9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BiS-1l-hgr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KTR-i3-tA9" secondAttribute="trailing" id="IjY-so-HLj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KTR-i3-tA9" secondAttribute="bottom" id="qkp-yD-sDK"/>
                         </constraints>
@@ -313,6 +330,7 @@ Fleece</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Hlc-yY-9je" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b5h-xl-wkw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -17,7 +17,11 @@ class brandCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var brandName: UILabel!
     
-    
+    func setup(logo: brands) {
+           self.logo.image = UIImage(named: logo.brandImage)
+           self.brandName.text = logo.brandName
+           // Customize the appearance of the cell if needed
+       }
     
     
 }
