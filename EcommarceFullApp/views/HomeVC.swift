@@ -60,9 +60,6 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
                 section.boundarySupplementaryItems = [header]
             }
             
-            
-
-
             return section
         }, configuration: configuration)
         
@@ -70,6 +67,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
 
         return layout
     }
+    
 
     func createFirstSectionLayout() -> NSCollectionLayoutSection {
         // Define layout for the first section with vertical arrangement
@@ -77,10 +75,10 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 3)
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 1)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0)
         
         return section
     }
