@@ -213,7 +213,7 @@ Fleece</string>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
-                                        <collectionReusableView key="sectionHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ReusableView" id="3jg-GH-5B4" customClass="CollectionViewHeaderReusableView" customModule="EcommarceFullApp" customModuleProvider="target">
+                                        <collectionReusableView key="sectionHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerView" id="3jg-GH-5B4" customClass="CollectionViewHeaderReusableView" customModule="EcommarceFullApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -232,7 +232,7 @@ Fleece</string>
                                                     </buttonConfiguration>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="HbY-kN-SO6" firstAttribute="leading" secondItem="3jg-GH-5B4" secondAttribute="leading" id="3Wf-gt-3gy"/>
                                                 <constraint firstItem="Mrt-rn-ore" firstAttribute="centerY" secondItem="3jg-GH-5B4" secondAttribute="centerY" id="CQF-xn-hYv"/>

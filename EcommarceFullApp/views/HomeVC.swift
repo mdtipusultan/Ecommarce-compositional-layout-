@@ -14,6 +14,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
     var brands: [brands] = [] // Populate this with your product data
     var category: [category] = [] // Populate this with your logo data
+    let sectionTitles = ["Section 1 Title", "Choose Brand", "New Arraival"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,62 +25,52 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         brands = TestData.shared.brandsData
         category = TestData.shared.categoryData
         
-        createLayout()
-        collectionView.register(CollectionViewHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ReusableView")
+        createCompositionalLayout()
 
     }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        print("ViewForSupplementaryElementOfKind: \(kind) Section: \(indexPath.section)")
 
-        if kind == UICollectionView.elementKindSectionHeader {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ReusableView", for: indexPath) as! CollectionViewHeaderReusableView
-            
-            //header.setup(sections[indexPath.section].title)
-            switch indexPath.section {
-            case 1:
-                header.title.text = "fvnjenvj"
-                header.viewAllButton.setTitle("See All >>", for: .normal)
-                
-            case 2: // Section 2: Categories
-                header.title.text = "frrjdcdenvj"
-                header.viewAllButton.setTitle("See All >>", for: .normal)
-                
-            default:
-                header.title.text = ""
-                header.viewAllButton.setTitle("", for: .normal)
-            }
-            
-            return header
-        }
-        //default:
-            return UICollectionReusableView()
-        
-    }
-    
+    func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
+        let configuration = UICollectionViewCompositionalLayoutConfiguration()
 
-    func createLayout(){
-        let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) in
+        let layout = UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, environment in
+            var section: NSCollectionLayoutSection
+            
+            // Define the section based on sectionIndex
+            
+            // Section 0: Search Bar
             if sectionIndex == 0 {
-                // Section 1: Hello, welcome, and search bar
-                return self.createFirstSectionLayout()
-            } else if sectionIndex == 1 {
-                // Section 2: Horizontal scrolling logo and logo name
-                return self.createSecondSectionLayout()
-            } else {
-                // Section 3: Product image, icon, name, and price
-                return self.createThirdSectionLayout()
+                section = self.createFirstSectionLayout()
             }
-        }
+            // Section 1: Logos
+            else if sectionIndex == 1 {
+                section = self.createSecondSectionLayout()
+                
+                // Add section header to each section
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
+                let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+                section.boundarySupplementaryItems = [header]
+            }
+            // Section 2: Products
+            else {
+                section = self.createThirdSectionLayout()
+                
+                // Add section header to each section
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
+                let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+                section.boundarySupplementaryItems = [header]
+            }
+            
+            
+
+
+            return section
+        }, configuration: configuration)
         
         collectionView.collectionViewLayout = layout
+
+        return layout
     }
-    
-    
 
-
-    
     func createFirstSectionLayout() -> NSCollectionLayoutSection {
         // Define layout for the first section with vertical arrangement
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
@@ -107,10 +98,6 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0)
         section.orthogonalScrollingBehavior = .continuous
         
-        section.boundarySupplementaryItems = [
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50)), elementKind: "categoryHeaderId", alignment: .topLeading)
-        ]
-        
         return section
     }
     
@@ -129,8 +116,6 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         
         return section
     }
-    
-    
     
     //MARK: COLLECTTION-VIEW
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -167,33 +152,21 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             return cell
         }
     }
-    
-    
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        
-        let size = CGSize(width: self.collectionView.bounds.width, height: 50)
-        return size
-        
-}
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // Return the size for the item at the specified indexPath
-        
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            //if indexPath.section != 0 {
+                if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath) as? CollectionViewHeaderReusableView {
+                    // Customize the header view based on the section
+                    let sectionTitle = sectionTitles[indexPath.section]
+                    headerView.title?.text = sectionTitle
+                    return headerView
+                } else {
+                    print("Failed to create header view")
+                }
+            
+        }
+        return UICollectionReusableView()
     }
 
- 
-    //@objc (collectionView:viewForSupplementaryElementOfKind:atIndexPath:)
-    
-    
-        /*
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        switch section {
-        case 0: // Section 1: Products
-            return CGSize(width: collectionView.frame.width, height: 0) // Set the height to 0
-        default:
-            return CGSize(width: collectionView.frame.width, height: 50) // Set the height for other sections
-        }
-    }
-    
-    */
 }
