@@ -23,5 +23,12 @@ class brandCollectionViewCell: UICollectionViewCell {
            // Customize the appearance of the cell if needed
        }
     
-    
+    override func awakeFromNib() {
+           super.awakeFromNib()
+        
+        imageTopViiew.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = 10
+
+
+       }
 }

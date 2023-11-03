@@ -70,11 +70,17 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     
 
     func createFirstSectionLayout() -> NSCollectionLayoutSection {
+        
+        // Calculate the section height based on the screen height
+        let screenHeight = UIScreen.main.bounds.height
+        let sectionHeight: CGFloat = 123 * (screenHeight / 812.0) // Adjust the multiplier as needed
+        
+        
         // Define layout for the first section with vertical arrangement
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(sectionHeight))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 1)
         
         let section = NSCollectionLayoutSection(group: group)

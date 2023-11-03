@@ -16,6 +16,10 @@ class topCollectionViewCell: UICollectionViewCell, UISearchBarDelegate {
     override func awakeFromNib() {
            super.awakeFromNib()
            searchBar.delegate = self // Assign the delegate to self
+        
+     
+
+
        }
     
     

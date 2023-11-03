@@ -43,14 +43,15 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Laza." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q1-Fg-gYN">
-                                                            <rect key="frame" x="0.0" y="38.666666666666664" width="121.66666666666667" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Tipu." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q1-Fg-gYN">
+                                                            <rect key="frame" x="0.0" y="35" width="119.66666666666667" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.5607843137254902" green="0.58431372549019611" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="bcf-z9-SEy">
+                                                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="bcf-z9-SEy">
                                                             <rect key="frame" x="0.0" y="71.333333333333329" width="274.33333333333331" height="48.666666666666671"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <scopeButtonTitles>
                                                                 <string>Title</string>
@@ -68,12 +69,12 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="3Q1-Fg-gYN" firstAttribute="leading" secondItem="CLx-2F-HT8" secondAttribute="leading" id="8yQ-ie-XSr"/>
-                                                        <constraint firstAttribute="bottom" secondItem="bcf-z9-SEy" secondAttribute="bottom" id="A4E-2b-hC2"/>
-                                                        <constraint firstItem="3Q1-Fg-gYN" firstAttribute="top" secondItem="CLx-2F-HT8" secondAttribute="bottom" constant="5" id="D0v-dT-F8M"/>
+                                                        <constraint firstItem="3Q1-Fg-gYN" firstAttribute="top" secondItem="eoA-ZQ-v0t" secondAttribute="bottom" multiplier="36/123" id="D0v-dT-F8M"/>
                                                         <constraint firstItem="CLx-2F-HT8" firstAttribute="top" secondItem="eoA-ZQ-v0t" secondAttribute="top" id="F3u-Wx-CRd"/>
                                                         <constraint firstItem="bQi-l4-kwt" firstAttribute="height" secondItem="eoA-ZQ-v0t" secondAttribute="height" multiplier="50/123" id="GDn-Me-7Y5"/>
                                                         <constraint firstAttribute="bottom" secondItem="bQi-l4-kwt" secondAttribute="bottom" id="LLX-PN-QoS"/>
-                                                        <constraint firstItem="bcf-z9-SEy" firstAttribute="leading" secondItem="eoA-ZQ-v0t" secondAttribute="leading" id="UBq-nY-j3P"/>
+                                                        <constraint firstItem="bcf-z9-SEy" firstAttribute="top" secondItem="eoA-ZQ-v0t" secondAttribute="bottom" multiplier="73/123" id="MBC-TR-GvA"/>
+                                                        <constraint firstItem="bcf-z9-SEy" firstAttribute="leading" secondItem="CLx-2F-HT8" secondAttribute="leading" id="UBq-nY-j3P"/>
                                                         <constraint firstItem="bQi-l4-kwt" firstAttribute="leading" secondItem="eoA-ZQ-v0t" secondAttribute="trailing" multiplier="285/355" id="aKO-h2-Adj"/>
                                                         <constraint firstItem="bcf-z9-SEy" firstAttribute="width" secondItem="eoA-ZQ-v0t" secondAttribute="width" multiplier="275/355" id="fjG-IR-8GO"/>
                                                         <constraint firstItem="CLx-2F-HT8" firstAttribute="leading" secondItem="eoA-ZQ-v0t" secondAttribute="leading" id="kD5-Nv-r2l"/>
