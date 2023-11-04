@@ -277,10 +277,10 @@ Fleece</string>
             </objects>
             <point key="canvasLocation" x="151.19999999999999" y="723.39901477832518"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailsVC-->
         <scene sceneID="2Fl-gB-zUI">
             <objects>
-                <viewController id="zO3-oF-cfN" sceneMemberID="viewController">
+                <viewController id="zO3-oF-cfN" customClass="detailsVC" customModule="EcommarceFullApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fjr-ia-cfF" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,13 +295,14 @@ Fleece</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2h2-3o-P6w">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="2h2-3o-P6w">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MvN-FC-vSb">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.59215686270000001" green="0.45882352939999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -342,6 +343,9 @@ Fleece</string>
                         <barButtonItem key="leftBarButtonItem" image="Back" id="wlv-Fd-JSI"/>
                         <barButtonItem key="rightBarButtonItem" image="nav-bag" id="gj1-X9-w6M"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="M19-IW-JM8" id="qlD-Et-hlk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3u5-98-26m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

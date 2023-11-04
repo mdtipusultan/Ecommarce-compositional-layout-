@@ -176,4 +176,29 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         return UICollectionReusableView()
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexPath.section == 1 {
+            let selectedItem = brands[indexPath.item]
+            print("Selected item in the second section: \(selectedItem)")
+            
+        } else if indexPath.section == 2 {
+            
+            let selectedItem = category[indexPath.item]
+            print("Selected item in the second section: \(selectedItem)")
+            
+            // Create an instance of the DetailsVC
+                  let detailsVC = detailsVC()
+                  
+                  // Set the selected item in DetailsVC
+                  detailsVC.selectedItem = selectedItem
+                  
+                  // Push the DetailsVC onto the navigation stack
+                  navigationController?.pushViewController(detailsVC, animated: true)
+            
+        }
+    }
+
+    
 }
