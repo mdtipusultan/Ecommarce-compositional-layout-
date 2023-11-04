@@ -278,6 +278,76 @@ Fleece</string>
             <point key="canvasLocation" x="151.19999999999999" y="723.39901477832518"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="2Fl-gB-zUI">
+            <objects>
+                <viewController id="zO3-oF-cfN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fjr-ia-cfF" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M19-IW-JM8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJT-wZ-qNq">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2h2-3o-P6w">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MvN-FC-vSb">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwX-FD-p9R" userLabel="downView">
+                                <rect key="frame" x="0.0" y="737" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-Rj-k3Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                        <color key="backgroundColor" red="0.59215686274509804" green="0.45882352941176469" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add to Cart">
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pf7-Rj-k3Y" firstAttribute="top" secondItem="WwX-FD-p9R" secondAttribute="top" id="Afb-Ic-Ete"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pf7-Rj-k3Y" secondAttribute="bottom" id="i96-6g-Rb6"/>
+                                    <constraint firstItem="Pf7-Rj-k3Y" firstAttribute="leading" secondItem="WwX-FD-p9R" secondAttribute="leading" id="j50-7s-ciM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pf7-Rj-k3Y" secondAttribute="trailing" id="mQA-Ef-Rmi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eye-QF-REK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="bottom" id="3gL-8r-7Xw"/>
+                            <constraint firstItem="WwX-FD-p9R" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="SZL-WI-4XC"/>
+                            <constraint firstItem="M19-IW-JM8" firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="top" id="U7Z-lV-hSX"/>
+                            <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="M19-IW-JM8" secondAttribute="trailing" id="cZ1-T3-nwM"/>
+                            <constraint firstItem="M19-IW-JM8" firstAttribute="top" secondItem="fjr-ia-cfF" secondAttribute="top" id="geD-7U-ixe"/>
+                            <constraint firstItem="WwX-FD-p9R" firstAttribute="height" secondItem="fjr-ia-cfF" secondAttribute="height" multiplier="75/812" id="gu1-om-HnK"/>
+                            <constraint firstItem="M19-IW-JM8" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="pe5-tO-uU5"/>
+                            <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="WwX-FD-p9R" secondAttribute="trailing" id="wMn-1p-6kl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k6J-7P-6k6">
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="wlv-Fd-JSI"/>
+                        <barButtonItem key="rightBarButtonItem" image="nav-bag" id="gj1-X9-w6M"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3u5-98-26m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="1620.4433497536947"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ZAf-sr-drt">
             <objects>
                 <viewController id="TlE-Ae-Ls6" sceneMemberID="viewController">
@@ -365,9 +435,28 @@ Fleece</string>
             </objects>
             <point key="canvasLocation" x="-757.97101449275374" y="723.88392857142856"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bci-pC-117">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9tB-vJ-B5h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kku-LT-MKi">
+                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zO3-oF-cfN" kind="relationship" relationship="rootViewController" id="ZoU-Ry-6wD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqH-gG-A4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="1620.4433497536947"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Adidas" width="25" height="17"/>
+        <image name="Back" width="45" height="45"/>
         <image name="Home" width="30" height="8.3333330154418945"/>
         <image name="Voice" width="50" height="50"/>
         <image name="Wishlist" width="41.333332061767578" height="8.6666669845581055"/>
@@ -376,6 +465,7 @@ Fleece</string>
         <image name="hoome" width="20.666666030883789" height="21.666666030883789"/>
         <image name="left-navBar" width="45" height="45"/>
         <image name="love" width="20.666666030883789" height="19.666666030883789"/>
+        <image name="nav-bag" width="45" height="45"/>
         <image name="right-navbar" width="45" height="45"/>
         <image name="wallet" width="21" height="19.333333969116211"/>
         <systemColor name="systemBackgroundColor">
