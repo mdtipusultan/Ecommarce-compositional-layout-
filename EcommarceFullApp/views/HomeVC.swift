@@ -26,12 +26,12 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         category = TestData.shared.categoryData
         
         createCompositionalLayout()
-
+        
     }
-
+    
     func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
-
+        
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, environment in
             var section: NSCollectionLayoutSection
             
@@ -64,11 +64,10 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         }, configuration: configuration)
         
         collectionView.collectionViewLayout = layout
-
+        
         return layout
     }
     
-
     func createFirstSectionLayout() -> NSCollectionLayoutSection {
         
         // Calculate the section height based on the screen height
@@ -106,18 +105,24 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func createThirdSectionLayout() -> NSCollectionLayoutSection {
-        // Define layout for the third section with vertical arrangement
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3))
+        
+        // Calculate the section height based on the screen height
+        let screenHeight = UIScreen.main.bounds.height
+        let itemHeight: CGFloat = 257 * (screenHeight / 812.0) // Adjust the multiplier as needed
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(itemHeight))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        //item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .estimated(1000))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 4)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20)
         
+        // Create a group with horizontal layout containing two items
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item, item])
+        
+        // Create a section with a vertical group of horizontal groups (each containing two items)
         let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .none
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0)
-        section.orthogonalScrollingBehavior = .continuous
-        
         return section
     }
     
@@ -156,21 +161,19 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             return cell
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
-            //if indexPath.section != 0 {
-                if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath) as? CollectionViewHeaderReusableView {
-                    // Customize the header view based on the section
-                    let sectionTitle = sectionTitles[indexPath.section]
-                    headerView.title?.text = sectionTitle
-                    return headerView
-                } else {
-                    print("Failed to create header view")
-                }
-            
+            if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath) as? CollectionViewHeaderReusableView {
+                // Customize the header view based on the section
+                let sectionTitle = sectionTitles[indexPath.section]
+                headerView.title?.text = sectionTitle
+                return headerView
+            } else {
+                print("Failed to create header view")
+            }
         }
         return UICollectionReusableView()
     }
-
+    
 }
