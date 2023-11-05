@@ -17,11 +17,21 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        tabBarController?.tabBar.isHidden = true
       
     }
+    
+    @IBAction func backButtooonTapped(_ sender: Any) {
+        
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
 //MARK: COOLLECTION-VIEW
  
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }

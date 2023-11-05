@@ -280,7 +280,7 @@ Fleece</string>
         <!--DetailsVC-->
         <scene sceneID="2Fl-gB-zUI">
             <objects>
-                <viewController id="zO3-oF-cfN" customClass="detailsVC" customModule="EcommarceFullApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zO3-oF-cfN" customClass="detailsVC" customModule="EcommarceFullApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fjr-ia-cfF" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,7 +340,11 @@ Fleece</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k6J-7P-6k6">
-                        <barButtonItem key="leftBarButtonItem" image="Back" id="wlv-Fd-JSI"/>
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="wlv-Fd-JSI">
+                            <connections>
+                                <action selector="backButtooonTapped:" destination="zO3-oF-cfN" id="rgb-eM-Wcb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="nav-bag" id="gj1-X9-w6M"/>
                     </navigationItem>
                     <connections>

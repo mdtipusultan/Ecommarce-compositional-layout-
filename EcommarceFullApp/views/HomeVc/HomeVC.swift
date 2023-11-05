@@ -187,15 +187,12 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             
             let selectedItem = category[indexPath.item]
             print("Selected item in the second section: \(selectedItem)")
+
+            let detailView = self.storyboard?.instantiateViewController(withIdentifier: "detailsVC") as! detailsVC
             
-            // Create an instance of the DetailsVC
-                  let detailsVC = detailsVC()
-                  
-                  // Set the selected item in DetailsVC
-                  detailsVC.selectedItem = selectedItem
-                  
-                  // Push the DetailsVC onto the navigation stack
-                  navigationController?.pushViewController(detailsVC, animated: true)
+            detailView.selectedItem = selectedItem
+            
+            self.navigationController?.pushViewController(detailView, animated: true)
             
         }
     }
