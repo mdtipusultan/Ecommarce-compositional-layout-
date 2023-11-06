@@ -285,26 +285,22 @@ Fleece</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG" translatesAutoresizingMaskIntoConstraints="NO" id="hdv-kY-R5n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-Uf-tna">
+                                <rect key="frame" x="147.66666666666666" y="338" width="80" height="49"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M19-IW-JM8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="737"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJT-wZ-qNq">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="314" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="2h2-3o-P6w">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MvN-FC-vSb">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.59215686270000001" green="0.45882352939999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwX-FD-p9R" userLabel="downView">
                                 <rect key="frame" x="0.0" y="737" width="375" height="75"/>
@@ -329,13 +325,18 @@ Fleece</string>
                         <viewLayoutGuide key="safeArea" id="eye-QF-REK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hdv-kY-R5n" firstAttribute="top" secondItem="fjr-ia-cfF" secondAttribute="top" id="2fI-aR-lsB"/>
                             <constraint firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="bottom" id="3gL-8r-7Xw"/>
+                            <constraint firstItem="Hfb-Uf-tna" firstAttribute="centerX" secondItem="hdv-kY-R5n" secondAttribute="centerX" id="9ns-Qf-oOv"/>
+                            <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="hdv-kY-R5n" secondAttribute="trailing" id="IJe-ar-53w"/>
                             <constraint firstItem="WwX-FD-p9R" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="SZL-WI-4XC"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="top" id="U7Z-lV-hSX"/>
                             <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="M19-IW-JM8" secondAttribute="trailing" id="cZ1-T3-nwM"/>
+                            <constraint firstItem="hdv-kY-R5n" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="gYV-IU-dBA"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="top" secondItem="fjr-ia-cfF" secondAttribute="top" id="geD-7U-ixe"/>
                             <constraint firstItem="WwX-FD-p9R" firstAttribute="height" secondItem="fjr-ia-cfF" secondAttribute="height" multiplier="75/812" id="gu1-om-HnK"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="pe5-tO-uU5"/>
+                            <constraint firstItem="Hfb-Uf-tna" firstAttribute="top" secondItem="hdv-kY-R5n" secondAttribute="bottom" multiplier="338/418" id="sNc-xt-sna"/>
                             <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="WwX-FD-p9R" secondAttribute="trailing" id="wMn-1p-6kl"/>
                         </constraints>
                     </view>
@@ -466,6 +467,8 @@ Fleece</string>
         <image name="Adidas" width="25" height="17"/>
         <image name="Back" width="45" height="45"/>
         <image name="Home" width="30" height="8.3333330154418945"/>
+        <image name="IMG" width="375" height="418"/>
+        <image name="Logo" width="80" height="49"/>
         <image name="Voice" width="50" height="50"/>
         <image name="Wishlist" width="41.333332061767578" height="8.6666669845581055"/>
         <image name="bag" width="20" height="21"/>
