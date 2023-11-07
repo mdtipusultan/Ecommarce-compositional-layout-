@@ -25,7 +25,9 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         brands = TestData.shared.brandsData
         category = TestData.shared.categoryData
         
-        createCompositionalLayout()
+        
+        collectionView.collectionViewLayout = createCompositionalLayout()
+        //createCompositionalLayout()
         
     }
     

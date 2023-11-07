@@ -291,11 +291,15 @@ Fleece</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-Uf-tna">
                                 <rect key="frame" x="147.66666666666666" y="338" width="80" height="49"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7u-Wl-Mxo" userLabel="middleView">
+                                <rect key="frame" x="0.0" y="387" width="375" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M19-IW-JM8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="737"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJT-wZ-qNq">
-                                    <size key="itemSize" width="314" height="128"/>
+                                    <size key="itemSize" width="329" height="64"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -327,15 +331,21 @@ Fleece</string>
                         <constraints>
                             <constraint firstItem="hdv-kY-R5n" firstAttribute="top" secondItem="fjr-ia-cfF" secondAttribute="top" id="2fI-aR-lsB"/>
                             <constraint firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="bottom" id="3gL-8r-7Xw"/>
+                            <constraint firstItem="O7u-Wl-Mxo" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="5u0-8y-EHg"/>
+                            <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="O7u-Wl-Mxo" secondAttribute="trailing" id="9eq-MW-Ld6"/>
                             <constraint firstItem="Hfb-Uf-tna" firstAttribute="centerX" secondItem="hdv-kY-R5n" secondAttribute="centerX" id="9ns-Qf-oOv"/>
                             <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="hdv-kY-R5n" secondAttribute="trailing" id="IJe-ar-53w"/>
+                            <constraint firstItem="hdv-kY-R5n" firstAttribute="height" secondItem="fjr-ia-cfF" secondAttribute="height" multiplier="418/812" id="JSl-kh-Uam"/>
                             <constraint firstItem="WwX-FD-p9R" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="SZL-WI-4XC"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="top" id="U7Z-lV-hSX"/>
                             <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="M19-IW-JM8" secondAttribute="trailing" id="cZ1-T3-nwM"/>
                             <constraint firstItem="hdv-kY-R5n" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="gYV-IU-dBA"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="top" secondItem="fjr-ia-cfF" secondAttribute="top" id="geD-7U-ixe"/>
                             <constraint firstItem="WwX-FD-p9R" firstAttribute="height" secondItem="fjr-ia-cfF" secondAttribute="height" multiplier="75/812" id="gu1-om-HnK"/>
+                            <constraint firstItem="O7u-Wl-Mxo" firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="top" id="h5Q-mL-PI2"/>
+                            <constraint firstItem="hdv-kY-R5n" firstAttribute="width" secondItem="fjr-ia-cfF" secondAttribute="width" id="lju-Nv-UNy"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="pe5-tO-uU5"/>
+                            <constraint firstItem="O7u-Wl-Mxo" firstAttribute="top" secondItem="Hfb-Uf-tna" secondAttribute="bottom" id="qy5-IQ-qSH"/>
                             <constraint firstItem="Hfb-Uf-tna" firstAttribute="top" secondItem="hdv-kY-R5n" secondAttribute="bottom" multiplier="338/418" id="sNc-xt-sna"/>
                             <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="WwX-FD-p9R" secondAttribute="trailing" id="wMn-1p-6kl"/>
                         </constraints>

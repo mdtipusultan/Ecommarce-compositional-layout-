@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell100" id="gTV-IL-0wX" customClass="frstCollectionViewCell" customModule="EcommarceFullApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="46"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Men's Printed Pullover Hoodie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fs1-fz-b3d">
+                        <rect key="frame" x="0.0" y="0.0" width="183" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.5607843137254902" green="0.58431372549019611" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nike Club Fleece" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lco-je-5Px">
+                        <rect key="frame" x="0.0" y="19" width="167" height="27"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5h1-3m-TpS">
+                        <rect key="frame" x="283" y="19" width="52" height="27"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOG-6c-L01">
+                        <rect key="frame" x="283" y="0.0" width="31" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.5607843137254902" green="0.58431372549019611" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="top" secondItem="Fs1-fz-b3d" secondAttribute="top" id="IHI-fS-pss"/>
+                <constraint firstItem="Lco-je-5Px" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="QdK-tD-wlL"/>
+                <constraint firstItem="Fs1-fz-b3d" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Va2-Xi-M4D"/>
+                <constraint firstAttribute="bottom" secondItem="5h1-3m-TpS" secondAttribute="bottom" id="ahf-Fl-sRR"/>
+                <constraint firstAttribute="top" secondItem="BOG-6c-L01" secondAttribute="top" id="eFN-0d-hnn"/>
+                <constraint firstItem="BOG-6c-L01" firstAttribute="leading" secondItem="5h1-3m-TpS" secondAttribute="leading" id="fmz-KX-66p"/>
+                <constraint firstAttribute="bottom" secondItem="Lco-je-5Px" secondAttribute="bottom" id="fxn-g9-Hza"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="5h1-3m-TpS" secondAttribute="trailing" id="gcx-T3-dU4"/>
+            </constraints>
+            <size key="customSize" width="266" height="70"/>
+            <point key="canvasLocation" x="-204" y="-12"/>
+        </collectionViewCell>
+    </objects>
+</document>
