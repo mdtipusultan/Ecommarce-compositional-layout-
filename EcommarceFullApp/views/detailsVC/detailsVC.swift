@@ -79,20 +79,21 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     
     func createSecondSectionLayout() -> NSCollectionLayoutSection {
         // Customize layout for the second section
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .estimated(100))
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .estimated(77))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(77))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item, item, item, item]) // Display 4 items in a row
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
 
         // Customize other section-specific properties here
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20)
         return section
     }
-
 
     
     func createThirdSectionLayout() -> NSCollectionLayoutSection {
