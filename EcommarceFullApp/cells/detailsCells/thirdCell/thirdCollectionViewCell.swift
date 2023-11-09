@@ -9,9 +9,19 @@ import UIKit
 
 class thirdCollectionViewCell: UICollectionViewCell {
 
+    
+    @IBOutlet weak var images: UIImageView!
+    
+    func configure(image: UIImage) {
+         images.image = image
+     }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        images.contentMode = .scaleAspectFit
+
     }
+ 
 
 }

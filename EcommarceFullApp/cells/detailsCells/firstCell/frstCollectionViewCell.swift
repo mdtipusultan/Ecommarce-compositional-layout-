@@ -8,6 +8,11 @@
 import UIKit
 
 class frstCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var mainImage: UIImageView!
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

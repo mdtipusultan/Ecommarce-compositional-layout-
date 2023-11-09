@@ -9,53 +9,43 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell100" id="gTV-IL-0wX" customClass="frstCollectionViewCell" customModule="EcommarceFullApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="335" height="46"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="frstCollectionViewCell" customModule="EcommarceFullApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="335" height="46"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Men's Printed Pullover Hoodie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fs1-fz-b3d">
-                        <rect key="frame" x="0.0" y="0.0" width="183" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="0.5607843137254902" green="0.58431372549019611" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nike Club Fleece" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lco-je-5Px">
-                        <rect key="frame" x="0.0" y="19" width="167" height="27"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5h1-3m-TpS">
-                        <rect key="frame" x="283" y="19" width="52" height="27"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOG-6c-L01">
-                        <rect key="frame" x="283" y="0.0" width="31" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="0.5607843137254902" green="0.58431372549019611" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="IMG" translatesAutoresizingMaskIntoConstraints="NO" id="fXz-sc-nGp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="KBc-HW-Kv9">
+                        <rect key="frame" x="147.66666666666666" y="338" width="80" height="49"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="top" secondItem="Fs1-fz-b3d" secondAttribute="top" id="IHI-fS-pss"/>
-                <constraint firstItem="Lco-je-5Px" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="QdK-tD-wlL"/>
-                <constraint firstItem="Fs1-fz-b3d" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Va2-Xi-M4D"/>
-                <constraint firstAttribute="bottom" secondItem="5h1-3m-TpS" secondAttribute="bottom" id="ahf-Fl-sRR"/>
-                <constraint firstAttribute="top" secondItem="BOG-6c-L01" secondAttribute="top" id="eFN-0d-hnn"/>
-                <constraint firstItem="BOG-6c-L01" firstAttribute="leading" secondItem="5h1-3m-TpS" secondAttribute="leading" id="fmz-KX-66p"/>
-                <constraint firstAttribute="bottom" secondItem="Lco-je-5Px" secondAttribute="bottom" id="fxn-g9-Hza"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="5h1-3m-TpS" secondAttribute="trailing" id="gcx-T3-dU4"/>
+                <constraint firstAttribute="bottom" secondItem="fXz-sc-nGp" secondAttribute="bottom" id="2rM-tB-tVz"/>
+                <constraint firstItem="fXz-sc-nGp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9OG-mL-FNJ"/>
+                <constraint firstItem="fXz-sc-nGp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Q2m-gN-puT"/>
+                <constraint firstItem="KBc-HW-Kv9" firstAttribute="centerX" secondItem="fXz-sc-nGp" secondAttribute="centerX" id="UTy-A1-VlK"/>
+                <constraint firstItem="KBc-HW-Kv9" firstAttribute="width" secondItem="fXz-sc-nGp" secondAttribute="width" multiplier="80/375" id="Zsa-mi-3AW"/>
+                <constraint firstItem="KBc-HW-Kv9" firstAttribute="top" secondItem="fXz-sc-nGp" secondAttribute="bottom" multiplier="338/418" id="eFW-xs-w1l"/>
+                <constraint firstItem="KBc-HW-Kv9" firstAttribute="height" secondItem="fXz-sc-nGp" secondAttribute="height" multiplier="49/418" id="yYP-3c-QVg"/>
+                <constraint firstAttribute="trailing" secondItem="fXz-sc-nGp" secondAttribute="trailing" id="z8n-xm-n2t"/>
             </constraints>
             <size key="customSize" width="266" height="70"/>
+            <connections>
+                <outlet property="logoImage" destination="KBc-HW-Kv9" id="WS4-Zd-loG"/>
+                <outlet property="mainImage" destination="fXz-sc-nGp" id="BGX-ZP-Bhs"/>
+            </connections>
             <point key="canvasLocation" x="-204" y="-12"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="IMG" width="375" height="418"/>
+        <image name="Logo" width="80" height="49"/>
+    </resources>
 </document>

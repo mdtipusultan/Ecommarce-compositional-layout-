@@ -285,20 +285,10 @@ Fleece</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG" translatesAutoresizingMaskIntoConstraints="NO" id="hdv-kY-R5n">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-Uf-tna">
-                                <rect key="frame" x="147.66666666666666" y="338" width="80" height="49"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7u-Wl-Mxo" userLabel="middleView">
-                                <rect key="frame" x="0.0" y="387" width="375" height="350"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M19-IW-JM8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="737"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJT-wZ-qNq">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJT-wZ-qNq">
                                     <size key="itemSize" width="329" height="64"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -329,25 +319,14 @@ Fleece</string>
                         <viewLayoutGuide key="safeArea" id="eye-QF-REK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hdv-kY-R5n" firstAttribute="top" secondItem="fjr-ia-cfF" secondAttribute="top" id="2fI-aR-lsB"/>
                             <constraint firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="bottom" id="3gL-8r-7Xw"/>
-                            <constraint firstItem="O7u-Wl-Mxo" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="5u0-8y-EHg"/>
-                            <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="O7u-Wl-Mxo" secondAttribute="trailing" id="9eq-MW-Ld6"/>
-                            <constraint firstItem="Hfb-Uf-tna" firstAttribute="centerX" secondItem="hdv-kY-R5n" secondAttribute="centerX" id="9ns-Qf-oOv"/>
-                            <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="hdv-kY-R5n" secondAttribute="trailing" id="IJe-ar-53w"/>
-                            <constraint firstItem="hdv-kY-R5n" firstAttribute="height" secondItem="fjr-ia-cfF" secondAttribute="height" multiplier="418/812" id="JSl-kh-Uam"/>
                             <constraint firstItem="WwX-FD-p9R" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="SZL-WI-4XC"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="top" id="U7Z-lV-hSX"/>
                             <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="M19-IW-JM8" secondAttribute="trailing" id="cZ1-T3-nwM"/>
-                            <constraint firstItem="hdv-kY-R5n" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="gYV-IU-dBA"/>
                             <constraint firstItem="M19-IW-JM8" firstAttribute="top" secondItem="fjr-ia-cfF" secondAttribute="top" id="geD-7U-ixe"/>
                             <constraint firstItem="WwX-FD-p9R" firstAttribute="height" secondItem="fjr-ia-cfF" secondAttribute="height" multiplier="75/812" id="gu1-om-HnK"/>
-                            <constraint firstItem="O7u-Wl-Mxo" firstAttribute="bottom" secondItem="WwX-FD-p9R" secondAttribute="top" id="h5Q-mL-PI2"/>
-                            <constraint firstItem="hdv-kY-R5n" firstAttribute="width" secondItem="fjr-ia-cfF" secondAttribute="width" id="lju-Nv-UNy"/>
-                            <constraint firstItem="M19-IW-JM8" firstAttribute="leading" secondItem="eye-QF-REK" secondAttribute="leading" id="pe5-tO-uU5"/>
-                            <constraint firstItem="O7u-Wl-Mxo" firstAttribute="top" secondItem="Hfb-Uf-tna" secondAttribute="bottom" id="qy5-IQ-qSH"/>
-                            <constraint firstItem="Hfb-Uf-tna" firstAttribute="top" secondItem="hdv-kY-R5n" secondAttribute="bottom" multiplier="338/418" id="sNc-xt-sna"/>
-                            <constraint firstItem="eye-QF-REK" firstAttribute="trailing" secondItem="WwX-FD-p9R" secondAttribute="trailing" id="wMn-1p-6kl"/>
+                            <constraint firstItem="M19-IW-JM8" firstAttribute="leading" secondItem="fjr-ia-cfF" secondAttribute="leading" id="pe5-tO-uU5"/>
+                            <constraint firstAttribute="trailing" secondItem="WwX-FD-p9R" secondAttribute="trailing" id="wMn-1p-6kl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k6J-7P-6k6">
@@ -457,6 +436,7 @@ Fleece</string>
         <!--Navigation Controller-->
         <scene sceneID="Bci-pC-117">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqH-gG-A4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9tB-vJ-B5h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kku-LT-MKi">
@@ -468,7 +448,6 @@ Fleece</string>
                         <segue destination="zO3-oF-cfN" kind="relationship" relationship="rootViewController" id="ZoU-Ry-6wD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yqH-gG-A4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="1620.4433497536947"/>
         </scene>
@@ -477,8 +456,6 @@ Fleece</string>
         <image name="Adidas" width="25" height="17"/>
         <image name="Back" width="45" height="45"/>
         <image name="Home" width="30" height="8.3333330154418945"/>
-        <image name="IMG" width="375" height="418"/>
-        <image name="Logo" width="80" height="49"/>
         <image name="Voice" width="50" height="50"/>
         <image name="Wishlist" width="41.333332061767578" height="8.6666669845581055"/>
         <image name="bag" width="20" height="21"/>
@@ -493,7 +470,7 @@ Fleece</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

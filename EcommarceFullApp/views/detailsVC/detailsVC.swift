@@ -17,6 +17,8 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.contentInsetAdjustmentBehavior = .never
+     
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -60,8 +62,27 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     func createFirstSectionLayout() -> NSCollectionLayoutSection {
         // Customize layout for the first section
         
-        let ScreenHeight = MyHelper.shared.screenHeight
-        let sectionTop = 402 * (ScreenHeight / 1073.0)
+        //let ScreenHeight = MyHelper.shared.screenHeight
+        //let sectionTop = 402 * (ScreenHeight / 1073.0)
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(418))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .none
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        return section
+    }
+    
+    func createSecondSectionLayout() -> NSCollectionLayoutSection {
+            
+        // Customize layout for the first section
+        
+        //let ScreenHeight = MyHelper.shared.screenHeight
+        //let sectionTop = 402 * (ScreenHeight / 1073.0)
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -71,13 +92,20 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .none
-
-        section.contentInsets = NSDirectionalEdgeInsets(top: sectionTop, leading: 20, bottom: 0, trailing: 20)
-
+        /*
+        // Add header with overlap
+           let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(150))
+           let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+           header.zIndex = 200 // Set zIndex to bring the header to the front
+           section.boundarySupplementaryItems = [header]
+        */
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20)
+        
         return section
     }
+
     
-    func createSecondSectionLayout() -> NSCollectionLayoutSection {
+    func createThirdSectionLayout() -> NSCollectionLayoutSection {
         // Customize layout for the second section
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .estimated(77))
@@ -90,26 +118,9 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
 
-        // Customize other section-specific properties here
-        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20)
-        return section
-    }
-
-    
-    func createThirdSectionLayout() -> NSCollectionLayoutSection {
-        // Customize layout for the first section
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.5))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .none
-
-        // Customize other section-specific properties here
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
         
+        // Customize other section-specific properties here
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 20)
         return section
     }
     
@@ -212,10 +223,10 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             return 1 // Section 1
         }
         else if section == 1 {
-            return productImages.count // Section 2
+            return 1// Section 2
         }
         else if section == 2 {
-            return 1 // Section 3
+            return productImages.count  // Section 3
         }
         else if section == 3 {
             return 1 // Section 4
@@ -243,7 +254,7 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             // Section 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell200", for: indexPath) as! secondCollectionViewCell
             
-            cell.configure(image: productImages[indexPath.item]!)
+           
             
             return cell
         }
@@ -252,6 +263,7 @@ class detailsVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             // Section 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell300", for: indexPath) as! thirdCollectionViewCell
             
+            cell.configure(image: productImages[indexPath.item]!)
             return cell
         }
         
