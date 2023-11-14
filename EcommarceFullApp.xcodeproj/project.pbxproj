@@ -96,13 +96,6 @@
 			path = HomeVc;
 			sourceTree = "<group>";
 		};
-		E83CF7042AF6D7C4002FBBA0 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		E83CF7052AF6D7C8002FBBA0 /* detailsVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				E83CF7052AF6D7C8002FBBA0 /* detailsVC */,
-				E83CF7042AF6D7C4002FBBA0 /* New Group */,
 				E83CF7032AF6D7B7002FBBA0 /* HomeVc */,
 			);
 			path = views;

@@ -25,10 +25,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         brands = TestData.shared.brandsData
         category = TestData.shared.categoryData
         
-        
         collectionView.collectionViewLayout = createCompositionalLayout()
-        //createCompositionalLayout()
-        
     }
     
     func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
@@ -36,9 +33,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, environment in
             var section: NSCollectionLayoutSection
-            
-            // Define the section based on sectionIndex
-            
+
             // Section 0: Search Bar
             if sectionIndex == 0 {
                 section = self.createFirstSectionLayout()
@@ -75,7 +70,6 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         // Calculate the section height based on the screen height
         let screenHeight = UIScreen.main.bounds.height
         let sectionHeight: CGFloat = 123 * (screenHeight / 812.0) // Adjust the multiplier as needed
-        
         
         // Define layout for the first section with vertical arrangement
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
@@ -198,6 +192,4 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             
         }
     }
-
-    
 }
